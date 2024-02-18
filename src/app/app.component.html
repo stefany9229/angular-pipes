@@ -1,0 +1,23 @@
+<router-outlet></router-outlet>
+
+<div *ngFor="let item of buyList">
+  <span>Nombre: {{ item.name }} </span>
+  <span>Precio: {{ item.price }} </span>
+  <span>Fecha: {{ item.date }} </span>
+</div>
+
+<hr>
+
+<div *ngFor="let item of buyList">
+  <span>Nombre: {{ item.name }} </span>
+  <span>Precio: {{ item.price | currency}} </span>
+  <span>Fecha: {{ item.date | date: 'dd/MMM/yyyy'}} </span>
+</div>
+
+<hr>
+
+<div *ngFor="let item of buyList">
+  <span>Nombre: {{ item.name  | capitalText }} </span>
+  <span>Precio: {{ item.price | currency}} </span>
+  <span>Fecha: {{ item.date | date: 'dd/MMM/yyyy'}} </span>
+</div>
